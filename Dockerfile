@@ -3,7 +3,6 @@ FROM slasterix/docker-ubuntu-apache
 ARG DEBIAN_FRONTEND=noninteractive
 RUN \
     apt-get update && \
-    apt-get install -y python-software-properties software-properties-common && \
     LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
     apt-get update && \
     apt-get install -y imagemagick graphicsmagick && \
@@ -16,7 +15,6 @@ RUN \
     chmod a+x /usr/local/bin/composer && \
     cd / && \
     rm -rf /tmp/composer && \
-    apt-get remove -y python-software-properties software-properties-common && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
     chmod 755 -R /var/www  && \
