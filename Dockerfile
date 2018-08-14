@@ -1,4 +1,4 @@
-FROM slasterix/docker-ubuntu-apache
+FROM slasterix/docker-ubuntu-apache:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN \
