@@ -18,7 +18,5 @@ RUN \
     rm -rf /tmp/composer && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
-    chmod 777 -R /var/www  && \
     apache2ctl -t && \
-    mkdir -p /run /var/lib/apache2 /var/lib/php && \
-    chmod -R 777 /run /var/lib/apache2 /var/lib/php /etc/php/5.6/apache2/php.ini
+    mkdir -p /run /var/lib/apache2 /var/lib/php 
